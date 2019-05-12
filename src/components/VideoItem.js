@@ -1,14 +1,14 @@
 import React from 'react';
-const VideoItem = ({video, handleVideoSelect}) => {
+const VideoItem = (props) => {
+    const video = props.video;
+    const userSelected = props.userSelected;
+    const videoThumbnail = video.snippet.thumbnails.default.url;
     return (
-        <div onClick={ () => {
-            handleVideoSelect(video)
-        }}
-        className="single-video"
-        >
-            <img src={video.snippet.thumbnails.defailt.url} alt=""/>
-            <div className="video-title">{video.snippet.title}
-            </div>
+        <div>
+            <li onClick={() => userSelected(video)} className="video-item">
+                <img src={videoThumbnail} alt=""/>
+                <div className="video-title">{video.snippet.title}</div>
+            </li>
         </div>
     )
 }

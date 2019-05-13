@@ -12,7 +12,6 @@ class App extends React.Component {
       videos: [],
       selectedVideo: null
     }
-    this.videoSearch('lacrosse');
   }
   render () {
     return (

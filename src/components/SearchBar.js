@@ -12,9 +12,11 @@ class Searchbar extends React.Component {
         return (
             <div className="search-bar">
                 <input
+                type="text"
                 value={this.state.search}
                 onChange={this.handleChange}
                 />
+                {/* <button onClick={handleSearchSubmit}/> */}
             </div>
         )
     }
@@ -22,13 +24,14 @@ class Searchbar extends React.Component {
         this.setState({
             search: e.target.value
         });
+        this.props.handleSearchSubmit(e.target.value)
     };
-    // handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     this.props.handleVideoSubmit(this.state.search);
-    //     console.log('this was submitted', this.input.value);
-        
-    // }
+    handleSearchSubmit = (e) => {
+        e.preventDefault();
+        this.setstate({
+            search: this.state.search
+        })
+    }
 }
 
 export default Searchbar;

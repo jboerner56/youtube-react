@@ -4,7 +4,8 @@ import YoutubeSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoDetail from './components/VideoDetail';
-const ApiKey = 'AIzaSyBucCifjcZm6dGx1Lt0nyF0X9t07X-w_S0';
+// const ApiKey = 'AIzaSyBucCifjcZm6dGx1Lt0nyF0X9t07X-w_S0';
+const ApiKey = 'AIzaSyAnQCdhcuhkK7ghSTk6vJwURF4BTyE8P-s';
 
 class App extends React.Component {
   constructor(props){
@@ -19,9 +20,7 @@ class App extends React.Component {
 
       <div className="App">
         <div className="search-bar">
-          {/* <SearchBar handleSearchSubmit={s => this.videoSearch(s)}/> */}
           <SearchBar
-          // searchValue={this.state.search}
           handleSubmit={this.videoSearch}
           />
         </div>
@@ -37,23 +36,17 @@ class App extends React.Component {
       </div>
     )
   }
-  videoSearch(e,search) {
+  videoSearch = (search) => {
     console.log("search function", search);
     YoutubeSearch({key:ApiKey, term: search}, (data) => {
-      console.log("syoutube search data", data);
+      console.log("youtube search data", data)
       this.setState({
         videos: data,
         selectedVideo: data[0]
       });
     });
+    console.log(YoutubeSearch);
+    
   }
-  // handleSearchSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("this is e", e);
-  //   this.setState({
-  //       search: this.state.search
-  //   })
-  // }
-
 }
 export default App;

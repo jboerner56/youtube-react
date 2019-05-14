@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
                     <button
                     type="button"
                     // value="search"
-                    onClick={(e)=>this.props.handleSubmit(e,this.state.search)}
+                    onClick={()=>this.props.handleSubmit(this.state.search)}
                     >Search</button>
                 </form>
             </div>
@@ -30,13 +30,8 @@ class SearchBar extends React.Component{
         this.setState({
             search: search.target.value
         });
+        console.log(search);
+        
     }
 }
-
-    // handleChange = (e) => {
-    //     this.setState({
-    //         search: e.target.value
-    //     });
-    // 
-    
 export default SearchBar;

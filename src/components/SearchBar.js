@@ -1,37 +1,42 @@
 import React from 'react';
-class Searchbar extends React.Component {
+class SearchBar extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            search: '',
-            
-        };
-        this.onChange = this.handleChange.bind(this);
+            search: ''
+        }
     }
-    render() {
+
+    render () {
         return (
             <div className="search-bar">
-                <input
-                type="text"
-                value={this.state.search}
-                onChange={this.handleChange}
-                />
-                {/* <button onClick={handleSearchSubmit}/> */}
+                <form >
+                    <input
+                    type="text"
+                    value={this.state.search}
+                    onChange={this.inputText}
+                    />
+                    <button
+                    type="button"
+                    // value="search"
+                    onClick={(e)=>this.props.handleSubmit(e,this.state.search)}
+                    >Search</button>
+                </form>
             </div>
         )
     }
-    handleChange = (e) => {
+    inputText = (search) => {
+        console.log("input t3xt", search)
         this.setState({
-            search: e.target.value
+            search: search.target.value
         });
-        this.props.handleSearchSubmit(e.target.value)
-    };
-    handleSearchSubmit = (e) => {
-        e.preventDefault();
-        this.setstate({
-            search: this.state.search
-        })
     }
 }
 
-export default Searchbar;
+    // handleChange = (e) => {
+    //     this.setState({
+    //         search: e.target.value
+    //     });
+    // 
+    
+export default SearchBar;

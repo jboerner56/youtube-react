@@ -5,10 +5,10 @@ const VideoItem = (props) => {
     const videoThumbnail = video.snippet.thumbnails.default.url;
     return (
         <div>
-            <li onClick={() => handleVideoSelect(video)} className="video-item">
+            <p onClick={() => handleVideoSelect(video)} className="video-item">
                 <img src={videoThumbnail} alt=""/>
                 <div className="video-title">{video.snippet.title}</div>
-            </li>
+            </p>
         </div>
     )
 }

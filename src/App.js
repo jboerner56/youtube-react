@@ -24,15 +24,17 @@ class App extends React.Component {
           handleSubmit={this.videoSearch}
           />
         </div>
-        <div className="video-detail">
-          <VideoDetail video={this.state.selectedVideo}/>
+        <div className="video-list">
+          <div className="video-detail">
+            <VideoDetail video={this.state.selectedVideo}/>
+          </div>
+          <div className="video-list">
+            <VideoList videos={this.state.videos} 
+            handleVideoSelect={selected => this.setState({
+              selectedVideo: selected 
+            })}/>
+          </div>
         </div>
-      <div className="video-list">
-        <VideoList videos={this.state.videos} 
-        handleVideoSelect={selected => this.setState({
-          selectedVideo: selected 
-        })}/>
-      </div>
       </div>
     )
   }

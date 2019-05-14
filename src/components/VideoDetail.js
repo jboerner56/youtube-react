@@ -1,7 +1,7 @@
 import React from 'react';
 const VideoDetail = ({video}) => {
     if(!video) {
-        return <div>Loading Video</div>;
+        return <div className="video-load">Loading Video</div>;
     }
 
     const videoSource = `https://www.youtube.com/embed/${video.id.videoId}`
@@ -10,7 +10,7 @@ const VideoDetail = ({video}) => {
         <div>
 
         <div className="video-detail">
-            <iframe src={videoSource} title="video-player"/>
+            <iframe className="selected-video" src={videoSource} title="video-player"/>
         </div>
         <div className="video-desc">
             <h3 className="video-title">{video.snippet.title}</h3>

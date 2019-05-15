@@ -6,7 +6,6 @@ const VideoList = (props) => {
             <div className="video-list">
                 <VideoItem key={v.etag} handleVideoSelect={props.handleVideoSelect} video={v}/>
             </div>
-
         )
     })
     

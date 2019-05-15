@@ -20,12 +20,16 @@ class App extends React.Component {
 
       <div className="App">
       <div className="title">
-        <h1>Creative title Under Construction</h1>
+        <h1>Creative Title Under Construction</h1>
       </div>
         <div className="search-bar">
           <SearchBar
           handleSubmit={this.videoSearch}
           />
+        </div>
+        <div className="pre-load">
+          <h3>For Your viewing pleasure before you search</h3>
+          <iframe title="gif" src="https://giphy.com/embed/ND6xkVPaj8tHO" width="480" height="446" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-money-cash-ND6xkVPaj8tHO">{null}</a></p>
         </div>
         <div className="video-list">
           <div className="video-detail">

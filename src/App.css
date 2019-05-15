@@ -17,7 +17,7 @@ text-align: center;
 }
 .video-item {
 text-align: center;
-margin-left: 20px;
+margin-left: 15px 15px 15px 20px;
 border: 2px solid gray;
 }
 #video-load{
@@ -39,5 +39,8 @@ border: 2px solid gray;
 }
 .video-title {
   border-top: 1px solid gray;
+  text-align: center;
+}
+.pre-load{
   text-align: center;
 }

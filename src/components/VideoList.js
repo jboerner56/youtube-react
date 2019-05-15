@@ -10,7 +10,7 @@ const VideoList = (props) => {
         )
     })
     
-    return <div>
+    return <div className="video-list-item">
                 {renderVideos}
             </div>
 }

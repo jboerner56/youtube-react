@@ -19,6 +19,9 @@ class App extends React.Component {
     return (
 
       <div className="App">
+      <div className="title">
+        <h1>Creative title Under Construction</h1>
+      </div>
         <div className="search-bar">
           <SearchBar
           handleSubmit={this.videoSearch}

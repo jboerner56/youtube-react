@@ -16,16 +16,28 @@ text-align: center;
   width: 50rem;
 }
 .video-item {
-text-align: right;
+text-align: center;
 margin-left: 20px;
+border: 2px solid gray;
 }
-.video-load{
-  text-align: center;
+#video-load{
+  text-align: center !important;
 }
 .video-list{
   position: relative;
   display: flex;
   flex-direction: row;
   padding-left: 20px;
+  text-align: center;
+}
+.title{
+  text-align: center;
+  color: blue;
+}
+.video-desc{
+  border: 2px solid gray;
+}
+.video-title {
+  border-top: 1px solid gray;
   text-align: center;
 }

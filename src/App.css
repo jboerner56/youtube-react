@@ -44,3 +44,15 @@ border: 2px solid gray;
 .pre-load{
   text-align: center;
 }
+.preload-gif{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+}
+/* .preload-gif .gif {
+  padding: 5px;
+  height:475px;
+  width: 475px;
+} */

@@ -28,8 +28,15 @@ class App extends React.Component {
           />
         </div>
         <div className="pre-load">
-          <h3>For Your viewing pleasure before you search</h3>
-          <iframe title="gif" src="https://giphy.com/embed/ND6xkVPaj8tHO" width="480" height="446" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-money-cash-ND6xkVPaj8tHO">{null}</a></p>
+          <h3>For Your viewing pleasure before you search for cool videos</h3>
+          <div className="preload-gif">
+            <div className="gif">
+              <iframe title="gif" src="https://giphy.com/embed/ND6xkVPaj8tHO" width="480" height="446" frameBorder="0" className="giphy-embed" allowFullScreen></          iframe><p><a href="https://giphy.com/gifs/cat-money-cash-ND6xkVPaj8tHO">{null}</a></p>
+            </div>
+            <div className="gif">
+              <iframe title="gif"src="https://giphy.com/embed/7zoGkR1qTyvzBFfLID" width="480" height="446" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-aww-eyebleach-7zoGkR1qTyvzBFfLID">{null}</a></p>
+            </div>
+          </div>
         </div>
         <div className="video-list">
           <div className="video-detail">
